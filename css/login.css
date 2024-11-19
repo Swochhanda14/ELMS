@@ -1,0 +1,231 @@
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+
+.form-container .backarrow a{
+  position: absolute;
+  top: -10px;
+  left: 0;
+  background-color: var(--primary-20);
+  padding: 10px;
+  cursor: pointer;
+  color: var(--primary-40);
+  border-radius: 5px 0 5px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-container .backarrow a:where(:hover, :focus-visible){
+  background-color: var(--primary-60);
+}
+
+.form-container .form h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 0 10px;
+}
+
+.form-container .form h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: var(--neutral-60);
+}
+
+.form-container .form a{
+    display: flex;
+    justify-content: center;
+    margin-block-start: 10px;
+}
+
+.form .form-content input[type="text"], .form .form-content input[type="password"], .form .form-content input[type="email"]{
+    width: 100%;
+    border: none;
+    padding: 1.4rem;
+    color: var(--primary-20);
+    font-size: 1.8rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    padding-inline: 45px;
+  }
+
+  .form .flex{
+    margin-block-end: -20px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .form .flex .radioinput{
+    display: flex;
+    gap: 5px;
+    padding: 1.4rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+
+  .form .flex .radioinput label{
+    font-size: 1.8rem;
+    color: var(--primary-20);
+    cursor: pointer;
+  }
+
+  .form .flex .radioinput:where(:hover, :focus-visible){
+    border: 2px solid var(--primary-70);;
+  }
+
+
+
+  .form .flexs{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form .forgotpsd {
+    margin-block-start: 0px;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .form .forgotpsd label, a{
+    font-size: 1.4rem;
+    color: var(--primary-20);
+  }
+
+  .form a{
+    font-size: 1.4rem;
+    color: var(--neutral-60);
+  }
+
+  .form a:where(:hover, :focus-visible){
+    color: var(--primary-70);
+  }
+
+  .form .form-content{
+    margin: 1.8rem 0rem;
+    display: flex;
+    position: relative;
+  }
+
+  .form .signupdes{
+    font-size: 1.4rem;
+    margin-block-start: 10px;
+  }
+
+    .form .form-content .loginicon{
+    position: absolute;
+    top: 30%;
+    left: 10px;
+  }
+
+  .form .psdforgot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.form .form-content input:where(:active, :focus-visible){
+    box-shadow: 0px 0px 0px 2px var(--primary-70);
+    outline: 2px solid var(--primary-70);
+  }
+  
+ .form .form-content input:where(:active, :focus) ~ .loginicon{
+    color: var(--primary-70);
+  }
+
+     
+/* button  */
+
+ .contact-btn{
+    width: 100%;
+    padding: 1.2rem 2rem;
+    background-color: var(--primary-70);
+    color: var(--neutral-100);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-duration-smooth) var(--transition-easing-quick);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-1);
+    font-weight: 600;
+  }
+  
+  .contact-btn:where(:hover, :focus-visible){
+    box-shadow: var(--shadow-2);
+    background-color: var(--primary-60);
+  }
+
+  .form-container .content{
+    padding: 20px;
+  }
+
+  .form-container .content .flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-container .content h1{
+    font-size: 2.1rem;
+    color: var(--neutral-50);
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-container .content h4{
+    font-size: 1.6rem;
+    color: var(--neutral-60);
+    margin-block-start: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+  
+.form-container .content .flex .btn{
+    margin-block-start: 30px;
+    width: 100%;
+    padding: 1.2rem 2rem;
+    background-color: var(--primary-70);
+    color: var(--neutral-100);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-duration-smooth) var(--transition-easing-quick);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-1);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container .content .flex .btn:where(:hover, :focus-visible){
+    box-shadow: var(--shadow-2);
+    background-color: var(--primary-60);
+  }
+  
+  /* button  */

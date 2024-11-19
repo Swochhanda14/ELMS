@@ -1,0 +1,105 @@
+
+.popup {
+    position: fixed;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    width: 50rem;
+    background-color: var(--white);
+    padding: 2rem 3rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 8px;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 20ms ease-in-out 0ms;
+    pointer-events: none;
+}
+
+
+.popup.active {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 20ms ease-in-out 0ms;
+    pointer-events: auto;
+}
+
+.popup #signIn.active {
+    display: block;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--primary-20);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 12px 0 12px;
+    transition: var(--transition-duration-smooth) var(--transition-easing-quick);
+}
+
+
+.popup .form h2 {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+
+.popup .form .form-content {
+    margin: 1.8rem 0rem;
+    display: flex;
+    position: relative;
+}
+
+.popup .form .form-content .loginicon {
+    position: absolute;
+    top: 30%;
+    left: 10px;
+}
+
+.popup .form .form-content input {
+    width: 100%;
+    border: none;
+    padding: 1.4rem;
+    color: var(--primary-20);
+    font-size: 1.8rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    padding-inline: 45px;
+}
+
+
+.popup .form .form-content select:where(:active, :focus-visible) {
+    border: 2px solid var(--primary-70);
+}
+
+
+.popup .form .form-content select:where(:active, :focus)~.loginicon {
+    color: var(--primary-80);
+}
+
+
+.popup .form .form-content textarea:where(:active, :focus-visible) {
+    border: 2px solid var(--primary-70);
+}
+
+
+.popup .form .form-content textarea:where(:active, :focus)~.loginicon {
+    color: var(--primary-80);
+}
+
